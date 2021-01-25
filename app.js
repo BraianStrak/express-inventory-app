@@ -38,4 +38,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb+srv://test:test@cluster0.hpfto.mongodb.net/express-inventory-app?retryWrites=true&w=majority'
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error'));
+
 module.exports = app;
+
