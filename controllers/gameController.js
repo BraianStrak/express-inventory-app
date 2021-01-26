@@ -1,6 +1,6 @@
 var Game = require('../models/game');
 var Genre = require('../models/genre');
-
+var async = require('async');
 
 exports.index = function(req, res) {
     async.parallel({

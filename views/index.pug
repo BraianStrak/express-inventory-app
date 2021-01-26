@@ -1,9 +1,13 @@
 extends layout
 
 block content
-  h1= title
   p Welcome to #{title}
 
- ul
-      li #[strong Game count:] !{data.game_count}
-      li #[strong Genre count:] !{data.genre_count}
+
+  if error
+    p Error getting dynamic content.
+  else
+    p The library has the following record counts:
+    ul
+          li #[strong Game count:] !{data.game_count}
+          li #[strong Genre count:] !{data.genre_count}

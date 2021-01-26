@@ -59,3 +59,5 @@ router.get('/genre/:id', genre_controller.genre_detail);
 
 // GET request for list of all Genre.
 router.get('/genres', genre_controller.genre_list);
+
+module.exports = router;
