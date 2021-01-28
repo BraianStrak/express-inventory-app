@@ -1,0 +1,1 @@
+A simple application used to track store inventory
